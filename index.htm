@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto OneBit</title>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h1 class="title">Calculadora de Gorjetas</h1>
+        </div>
+        <div>
+            <form class="tipsForm" id="tipsForm">
+                <label for="bill">
+                    <p>Quanto ficou a conta?</p>
+                </label>
+                <p>
+                    R$ <input type="number" placeholder="100" name="bill" id="bill" class="formInput" required>
+                </p>
+                <label for="seriveQuality">
+                    <p>Como foi seu serviço?</p>
+                </label>
+                <select name="serviceQuality" id="serviceQuality" class="formSelect" required>
+                    <option disable selected value="0">Escolha uma opção</option>
+                    <option value="0.30">30% - Excelente</option>
+                    <option value="0.20">20% - Bom</option>
+                    <option value="0.15">15% - Médio</option>
+                    <option value="0.10">10% - Ruim</option>
+                    <option value="0.05">05% - Péssimo</option>
+                </select>
+                <label for="people">
+                    <p>Quantas pessoas vão dividir a conta?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="1" name="people" id="people" class="formInput" required> pessoa(s)
+                </p>
+                <button class="formSubmit" type="submit">Calcular</button>
+            </form>
+        </div>
+        <div id="totalTip">
+            Gorgeta total:
+            R$ <span id="tip">0.00</span>
+            <span id="each">cada</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
